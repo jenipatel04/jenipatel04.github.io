@@ -139,6 +139,15 @@
   .card .org{font-size:0.9rem;color:var(--blue);font-weight:600;margin-bottom:4px;}
   .card .meta{font-size:0.82rem;color:var(--muted);}
 
+  /* CERT GALLERY */
+  .cert-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
+  .cert-item{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;text-align:center;}
+  .cert-item img{width:100%;display:block;border-bottom:1px solid var(--border);transition:transform .2s;}
+  .cert-item a:hover img{transform:scale(1.03);}
+  .cert-item .cert-caption{padding:14px 16px;}
+  .cert-item .cert-caption h4{font-size:0.95rem;color:var(--navy-deep);margin-bottom:2px;}
+  .cert-item .cert-caption span{font-size:0.78rem;color:var(--muted);}
+
   /* SKILLS */
   .skills-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
   .skill-cat h4{color:var(--navy-deep);font-size:0.95rem;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--accent);display:inline-block;}
@@ -212,6 +221,7 @@
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
+      <a href="#certificates">Certificates</a>
       <a href="#skills">Skills</a>
       <a href="#volunteering">Volunteering</a>
       <a href="#recommendations">Recommendations</a>
@@ -369,6 +379,33 @@
         <div class="card">
           <h3>HRPA Member</h3>
           <div class="org">Human Resources Professionals Association</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certificates">
+  <div class="container">
+    <div class="section-label">Proof of Work</div>
+    <h2 class="section-title">Certificate Gallery</h2>
+    <div class="cert-gallery">
+      <div class="cert-item">
+        <a href="certs/hrm-cert.png" target="_blank" rel="noopener">
+          <img src="certs/hrm-cert.png" alt="Ontario College Graduate Certificate in Human Resources Management">
+        </a>
+        <div class="cert-caption">
+          <h4>Graduate Certificate, Human Resources Management</h4>
+          <span>Centennial College · August 2025</span>
+        </div>
+      </div>
+      <div class="cert-item">
+        <a href="certs/digital-marketing-cert.png" target="_blank" rel="noopener">
+          <img src="certs/digital-marketing-cert.png" alt="Certificate of Training in Digital Marketing">
+        </a>
+        <div class="cert-caption">
+          <h4>Certificate of Training in Digital Marketing</h4>
+          <span>GAO Tek Inc. · March 2025</span>
         </div>
       </div>
     </div>
