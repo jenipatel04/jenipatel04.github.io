@@ -166,6 +166,19 @@
     padding:6px 12px;border-radius:16px;
   }
 
+  /* SKILLS ANIMATION (wave cascade) */
+  .skill-cat h4{
+    opacity:0;transform:translateX(-16px);
+    transition:opacity .4s ease, transform .4s ease;
+  }
+  .tag{
+    opacity:0;transform:translateY(24px) rotate(-4deg);
+    transition:opacity .45s cubic-bezier(.2,.8,.2,1), transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .15s ease;
+  }
+  #skills.wave-revealed .skill-cat h4{opacity:1;transform:translateX(0);}
+  #skills.wave-revealed .tag{opacity:1;transform:translateY(0) rotate(0deg);}
+  #skills.wave-revealed .tag:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 4px 10px rgba(163,118,10,0.25);}
+
   /* PHILOSOPHY / VENN */
   .philosophy{
     background:var(--navy-deep);color:#fff;border-radius:16px;padding:44px 32px;
@@ -227,10 +240,11 @@
   <div class="nav-inner">
     <div class="nav-logo">JENI <span>PATEL</span></div>
     <nav class="nav-links">
-      <a href="#about">About</a><a href="#skills">Skills</a>
+      <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
       <a href="#certificates">Certificates</a>
+      <a href="#skills">Skills</a>
       <a href="#volunteering">Volunteering</a>
       <a href="#recommendations">Recommendations</a>
       <a href="#schedule">Book a Call</a>
@@ -266,7 +280,7 @@
     <p class="summary-text">
       Strategic HR Coordinator with <strong>3+ years</strong> of experience across corporate and high-volume
       hospitality environments in the Greater Toronto Area. I specialize in full-cycle recruitment, onboarding
-      program design, HRIS management, and HR compliance — having managed <strong>25+ requisitions total across both HR roles</strong> over <strong>2+ years</strong>,
+      program design, HRIS management, and HR compliance — having managed <strong>25+ concurrent requisitions</strong>,
       screened <strong>200+ resumes</strong>, and earned a promotion to HR Team Lead within <strong>3 months</strong>
       at GAO Tek Inc. My edge is a dual lens: formal HR operations expertise paired with hands-on hospitality
       experience, sharpening my instincts for workforce planning, retention, and employee relations in fast-paced,
@@ -277,11 +291,13 @@
     <div class="summary-grid">
       <div class="stat-card"><div class="stat-num">3+ yrs</div><div class="stat-label">HR &amp; hospitality experience</div></div>
       <div class="stat-card"><div class="stat-num">200+</div><div class="stat-label">Resumes screened</div></div>
-      <div class="stat-card"><div class="stat-num">25+</div><div class="stat-label">Requisitions managed (combined, 2+ yrs across both HR roles)</div></div>
+      <div class="stat-card"><div class="stat-num">25+</div><div class="stat-label">Concurrent requisitions managed</div></div>
       <div class="stat-card"><div class="stat-num">3 mo</div><div class="stat-label">To promotion at GAO Tek Inc.</div></div>
     </div>
   </div>
-</section> <section id="skills" class="alt-bg"> <div class="container"> <div class="section-label">Capabilities</div> <h2 class="section-title">Core Skills &amp; Competencies</h2> <div class="skills-wrap"> <div class="skill-cat"> <h4>Recruitment &amp; Talent Acquisition</h4> <div class="skill-tags"> <span class="tag">Full-cycle recruitment</span> <span class="tag">High-volume screening</span> <span class="tag">Phone screening</span> <span class="tag">Interview coordination</span> <span class="tag">Offer preparation</span> <span class="tag">Job postings</span> </div> </div> <div class="skill-cat"> <h4>HR &amp; People Operations</h4> <div class="skill-tags"> <span class="tag">Onboarding design</span> <span class="tag">Offboarding</span> <span class="tag">Employment documentation</span> <span class="tag">Compliance tracking</span> <span class="tag">Shift planning</span> <span class="tag">Employee relations</span> </div> </div> <div class="skill-cat"> <h4>HRIS &amp; Systems</h4> <div class="skill-tags"> <span class="tag">Workday</span> <span class="tag">BambooHR</span> <span class="tag">SAP SuccessFactors</span> <span class="tag">SAP HCM</span> <span class="tag">ADP Workforce Now</span> <span class="tag">Ceridian Dayforce</span> <span class="tag">Taleo</span> <span class="tag">iCIMS</span> <span class="tag">Greenhouse</span> </div> </div> <div class="skill-cat"> <h4>Legislation &amp; Compliance</h4> <div class="skill-tags"> <span class="tag">Ontario ESA</span> <span class="tag">PIPEDA</span> <span class="tag">AODA</span> <span class="tag">Ontario Human Rights Code</span> <span class="tag">WHMIS</span> <span class="tag">OSHA</span> </div> </div> <div class="skill-cat"> <h4>Tools &amp; Productivity</h4> <div class="skill-tags"> <span class="tag">Microsoft 365</span> <span class="tag">Excel</span> <span class="tag">Notion AI</span> <span class="tag">Generative AI Tools</span> </div> </div> <div class="skill-cat"> <h4>Communication</h4> <div class="skill-tags"> <span class="tag">Stakeholder correspondence</span> <span class="tag">Cross-functional liaison</span> <span class="tag">Client-facing service</span> <span class="tag">Team coordination</span> </div> </div> </div> </div> </section> <section id="experience" class="alt-bg">
+</section>
+
+<section id="experience" class="alt-bg">
   <div class="container">
     <div class="section-label">Career</div>
     <h2 class="section-title">Professional Experience</h2>
@@ -313,7 +329,7 @@
           <span class="tl-badge">🏆 Promoted within 3 months · Awarded Best Intern</span>
           <ul class="tl-list">
             <li>Managed end-to-end onboarding for 25+ remote employees, preparing and processing 50+ employment documents with 100% accuracy and zero compliance gaps.</li>
-            <li>Led full-cycle recruitment as part of 25+ requisitions managed across both HR roles — screening 200+ resumes, coordinating 30+ structured phone screens, and maintaining 200+ compliant personnel files in Workday and BambooHR.</li>
+            <li>Led full-cycle recruitment across 25+ requisitions — screening 200+ resumes, coordinating 30+ structured phone screens, and maintaining 200+ compliant personnel files in Workday and BambooHR.</li>
             <li>Supported employee relations and performance documentation for 10+ employees; streamlined workflows using Excel and Notion AI, cutting manual processing by 30% and generating $3,000–$5,000 in annual savings.</li>
             <li>Sustained an 80%+ positive candidate experience while leading a cross-functional HR team and coordinating hiring decisions.</li>
           </ul>
@@ -367,7 +383,7 @@
         <div class="card">
           <h3>HRPA Member, 2026–2027</h3>
           <div class="org">Human Resources Professionals Association</div>
-          <div class="meta">Verified credential · <a href="https://credentials.hrpa.ca/verifier?id=6229840a-3c53-4873-9c65-88366ff43967&amp;dbl=to" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700;">View credential</a></div>
+          <div class="meta">Verified credential · <a href="https://credentials.hrpa.ca/verifier?id=6229840a-3c53-4873-9c65-88366ff43967&dbl=to" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700;">View credential</a></div>
         </div>
         <div class="card">
           <h3>Certificate of Training in Digital Marketing</h3>
@@ -424,6 +440,80 @@
         <div class="cert-caption">
           <h4>HRPA Member, 2026–2027</h4>
           <span>Human Resources Professionals Association</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="alt-bg">
+  <div class="container">
+    <div class="section-label">Capabilities</div>
+    <h2 class="section-title">Core Skills &amp; Competencies</h2>
+    <div class="skills-wrap">
+      <div class="skill-cat">
+        <h4>Recruitment &amp; Talent Acquisition</h4>
+        <div class="skill-tags">
+          <span class="tag">Full-cycle recruitment</span>
+          <span class="tag">High-volume screening</span>
+          <span class="tag">Phone screening</span>
+          <span class="tag">Interview coordination</span>
+          <span class="tag">Offer preparation</span>
+          <span class="tag">Job postings</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <h4>HR &amp; People Operations</h4>
+        <div class="skill-tags">
+          <span class="tag">Onboarding design</span>
+          <span class="tag">Offboarding</span>
+          <span class="tag">Employment documentation</span>
+          <span class="tag">Compliance tracking</span>
+          <span class="tag">Shift planning</span>
+          <span class="tag">Employee relations</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <h4>HRIS &amp; Systems</h4>
+        <div class="skill-tags">
+          <span class="tag">Workday</span>
+          <span class="tag">BambooHR</span>
+          <span class="tag">SAP SuccessFactors</span>
+          <span class="tag">SAP HCM</span>
+          <span class="tag">ADP Workforce Now</span>
+          <span class="tag">Ceridian Dayforce</span>
+          <span class="tag">Taleo</span>
+          <span class="tag">iCIMS</span>
+          <span class="tag">Greenhouse</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <h4>Legislation &amp; Compliance</h4>
+        <div class="skill-tags">
+          <span class="tag">Ontario ESA</span>
+          <span class="tag">PIPEDA</span>
+          <span class="tag">AODA</span>
+          <span class="tag">Ontario Human Rights Code</span>
+          <span class="tag">WHMIS</span>
+          <span class="tag">OSHA</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <h4>Tools &amp; Productivity</h4>
+        <div class="skill-tags">
+          <span class="tag">Microsoft 365</span>
+          <span class="tag">Excel</span>
+          <span class="tag">Notion AI</span>
+          <span class="tag">Generative AI Tools</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <h4>Communication</h4>
+        <div class="skill-tags">
+          <span class="tag">Stakeholder correspondence</span>
+          <span class="tag">Cross-functional liaison</span>
+          <span class="tag">Client-facing service</span>
+          <span class="tag">Team coordination</span>
         </div>
       </div>
     </div>
@@ -538,5 +628,23 @@
   </div>
 </footer>
 
+<script>
+  (function(){
+    var section = document.getElementById('skills');
+    if(!section) return;
+    var headers = section.querySelectorAll('.skill-cat h4');
+    headers.forEach(function(h, i){ h.style.transitionDelay = (i * 40) + 'ms'; });
+    var tags = section.querySelectorAll('.tag');
+    tags.forEach(function(t, i){ t.style.transitionDelay = (i * 75) + 'ms'; });
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        section.classList.toggle('wave-revealed', e.isIntersecting);
+      });
+    }, { threshold: 0.2 });
+    observer.observe(section);
+  })();
+</script>
+
 </body>
 </html>
+Add skills animation
