@@ -117,28 +117,6 @@
   .stat-num{font-size:1.7rem;font-weight:800;color:var(--navy-deep);}
   .stat-label{font-size:0.85rem;color:var(--muted);margin-top:4px;}
 
-   /* SKILLS */
-  .skills-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
-  .skill-cat h4{color:var(--navy-deep);font-size:0.95rem;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--accent);display:inline-block;}
-  .skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
-  .tag{
-    background:#fdf2d0;color:var(--blue);font-size:0.8rem;font-weight:700;
-    padding:6px 12px;border-radius:16px;
-  }
-
-  /* SKILLS ANIMATION (wave cascade) */
-  .skill-cat h4{
-    opacity:0;transform:translateX(-16px);
-    transition:opacity .4s ease, transform .4s ease;
-  }
-  .tag{
-    opacity:0;transform:translateY(24px) rotate(-4deg);
-    transition:opacity .45s cubic-bezier(.2,.8,.2,1), transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .15s ease;
-  }
-  #skills.wave-revealed .skill-cat h4{opacity:1;transform:translateX(0);}
-  #skills.wave-revealed .tag{opacity:1;transform:translateY(0) rotate(0deg);}
-  #skills.wave-revealed .tag:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 4px 10px rgba(163,118,10,0.25);}
-
   /* PHILOSOPHY / VENN */
   .philosophy{
     background:var(--navy-deep);color:#fff;border-radius:16px;padding:44px 32px;
@@ -160,6 +138,28 @@
     min-width:170px;
   }
   .formula-result .small{color:rgba(11,11,11,0.7);}
+
+   /* SKILLS */
+  .skills-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+  .skill-cat h4{color:var(--navy-deep);font-size:0.95rem;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--accent);display:inline-block;}
+  .skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+  .tag{
+    background:#fdf2d0;color:var(--blue);font-size:0.8rem;font-weight:700;
+    padding:6px 12px;border-radius:16px;
+  }
+
+  /* SKILLS ANIMATION (wave cascade) */
+  .skill-cat h4{
+    opacity:0;transform:translateX(-16px);
+    transition:opacity .4s ease, transform .4s ease;
+  }
+  .tag{
+    opacity:0;transform:translateY(24px) rotate(-4deg);
+    transition:opacity .45s cubic-bezier(.2,.8,.2,1), transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .15s ease;
+  }
+  #skills.wave-revealed .skill-cat h4{opacity:1;transform:translateX(0);}
+  #skills.wave-revealed .tag{opacity:1;transform:translateY(0) rotate(0deg);}
+  #skills.wave-revealed .tag:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 4px 10px rgba(163,118,10,0.25);}
   
   /* EXPERIENCE TIMELINE */
   .timeline{position:relative;padding-left:28px;border-left:2px solid var(--border);}
