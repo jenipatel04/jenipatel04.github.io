@@ -155,7 +155,7 @@
   #skills.wave-revealed .skill-cat h4{opacity:1;transform:translateX(0);}
   #skills.wave-revealed .tag{opacity:1;transform:translateY(0) rotate(0deg);}
   #skills.wave-revealed .tag:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 4px 10px rgba(163,118,10,0.25);}
-  
+
   /* EXPERIENCE TIMELINE */
   .timeline{position:relative;padding-left:28px;border-left:2px solid var(--border);}
   .tl-item{position:relative;padding-bottom:44px;}
@@ -196,7 +196,7 @@
   .cert-item .cert-caption h4{font-size:0.95rem;color:var(--navy-deep);margin-bottom:2px;}
   .cert-item .cert-caption span{font-size:0.78rem;color:var(--muted);}
 
- 
+
 
   /* VOLUNTEERING */
   .vol-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
@@ -213,7 +213,16 @@
   .rec-name{font-size:0.9rem;font-weight:800;color:var(--navy-deep);}
   .rec-title{font-size:0.78rem;color:var(--muted);}
 
-  .insights-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}.insight-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px;display:flex;flex-direction:column;border-top:3px solid var(--blue);}.insight-card h3{font-size:1.02rem;color:var(--navy-deep);margin-bottom:10px;line-height:1.35;}.insight-card p{font-size:0.88rem;color:var(--muted);margin-bottom:16px;flex:1;}.insight-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}.insight-tags span{background:#fdf2d0;color:var(--blue);font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:12px;}.insight-link{font-size:0.85rem;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:6px;}.insight-link:hover{color:var(--accent);text-decoration:underline;}/* FOOTER / CONTACT */
+  .insights-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}.insight-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px;display:flex;flex-direction:column;border-top:3px solid var(--blue);}.insight-card h3{font-size:1.02rem;color:var(--navy-deep);margin-bottom:10px;line-height:1.35;}.insight-card p{font-size:0.88rem;color:var(--muted);margin-bottom:16px;flex:1;}.insight-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}.insight-tags span{background:#fdf2d0;color:var(--blue);font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:12px;}.insight-link{font-size:0.85rem;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:6px;}.insight-link:hover{color:var(--accent);text-decoration:underline;}/* BOOKING FORM */
+  .book-form{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:28px;max-width:600px;}
+  .book-form label{display:block;font-size:0.85rem;font-weight:700;color:var(--navy-deep);margin-bottom:6px;}
+  .book-form input, .book-form textarea{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:6px;font-size:0.95rem;font-family:inherit;margin-bottom:16px;background:#fff;color:var(--text);}
+  .book-form input:focus, .book-form textarea:focus{outline:none;border-color:var(--blue);}
+  .book-form .row-2{display:flex;gap:12px;flex-wrap:wrap;}
+  .book-form .row-2 > div{flex:1;min-width:180px;}
+  .book-form button{border:none;cursor:pointer;}
+  .book-form .form-note{font-size:0.8rem;color:var(--muted);margin-top:2px;}
+  /* FOOTER / CONTACT */
   footer{background:var(--navy-deep);color:#cfcabd;padding:56px 0 30px;text-align:center;}
   footer h2{color:#fff;font-size:1.6rem;font-weight:800;margin-bottom:10px;}
   footer p{max-width:500px;margin:0 auto 24px;font-size:0.95rem;}
@@ -510,12 +519,35 @@
   <div class="container">
     <div class="section-label">Let's Talk</div>
     <h2 class="section-title">Book an Interview</h2>
-    <p class="summary-text">Pick a time that works for you and it'll go straight into my calendar — no back-and-forth emails needed.</p>
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
-      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-      <div class="calendly-inline-widget" data-url="https://calendly.com/jenipatel481/interview-with-jeni-patel-1?hide_gdpr_banner=1" style="min-width:280px;height:700px;"></div>
-      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    </div>
+    <p class="summary-text">Send a request with your preferred date, time, and what you'd like to discuss. I personally review every request and will reply by email to confirm once it's locked into my calendar — nothing is final until you hear back from me.</p>
+    <form class="book-form" id="booking-form">
+      <div class="row-2">
+        <div>
+          <label for="bf-name">Your Name *</label>
+          <input type="text" id="bf-name" required>
+        </div>
+        <div>
+          <label for="bf-email">Your Email *</label>
+          <input type="email" id="bf-email" required>
+        </div>
+      </div>
+      <div class="row-2">
+        <div>
+          <label for="bf-date">Preferred Date *</label>
+          <input type="date" id="bf-date" required>
+        </div>
+        <div>
+          <label for="bf-time">Preferred Time *</label>
+          <input type="time" id="bf-time" required>
+        </div>
+      </div>
+      <label for="bf-purpose">Purpose of Meeting *</label>
+      <input type="text" id="bf-purpose" placeholder="e.g. Interview for HR Coordinator role" required>
+      <label for="bf-notes">Additional Notes</label>
+      <textarea id="bf-notes" rows="3" placeholder="Anything that will help prepare for the call"></textarea>
+      <button type="submit" class="btn btn-primary">Send Request</button>
+      <p class="form-note">This opens your email app with the request pre-filled. I'll reply to that email to confirm once I've checked my calendar — the meeting isn't booked until you hear back from me.</p>
+    </form>
   </div>
 </section>
 
@@ -549,6 +581,33 @@
   })();
 </script>
 
+<script>
+  (function(){
+    var form = document.getElementById('booking-form');
+    if(!form) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = document.getElementById('bf-name').value.trim();
+      var email = document.getElementById('bf-email').value.trim();
+      var date = document.getElementById('bf-date').value;
+      var time = document.getElementById('bf-time').value;
+      var purpose = document.getElementById('bf-purpose').value.trim();
+      var notes = document.getElementById('bf-notes').value.trim();
+      var subject = 'Interview Request from ' + name + ' - ' + date + ' ' + time;
+      var bodyLines = [
+        'Name: ' + name,
+        'Email: ' + email,
+        'Preferred date: ' + date,
+        'Preferred time: ' + time,
+        'Purpose: ' + purpose,
+        'Notes: ' + (notes || 'None')
+      ];
+      var body = bodyLines.join('\n');
+      var mailto = 'mailto:jenipatel481@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      window.location.href = mailto;
+    });
+  })();
+</script>
+
 </body>
 </html>
-Add skills animation
