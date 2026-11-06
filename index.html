@@ -143,18 +143,9 @@
     padding:6px 12px;border-radius:16px;
   }
 
-  /* SKILLS ANIMATION (wave cascade) */
-  .skill-cat h4{
-    opacity:0;transform:translateX(-16px);
-    transition:opacity .4s ease, transform .4s ease;
-  }
-  .tag{
-    opacity:0;transform:translateY(24px) rotate(-4deg);
-    transition:opacity .45s cubic-bezier(.2,.8,.2,1), transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .15s ease;
-  }
-  #skills.wave-revealed .skill-cat h4{opacity:1;transform:translateX(0);}
-  #skills.wave-revealed .tag{opacity:1;transform:translateY(0) rotate(0deg);}
-  #skills.wave-revealed .tag:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 4px 10px rgba(163,118,10,0.25);}
+  /* SKILLS - always visible (wave animation removed: it hid the tags) */
+  .tag{transition:transform .15s ease, box-shadow .15s ease;}
+  .tag:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 4px 10px rgba(163,118,10,0.25);}
 
   /* EXPERIENCE TIMELINE */
   .timeline{position:relative;padding-left:28px;border-left:2px solid var(--border);}
@@ -553,22 +544,6 @@
   </div>
 </footer>
 
-<script>
-  (function(){
-    var section = document.getElementById('skills');
-    if(!section) return;
-    var headers = section.querySelectorAll('.skill-cat h4');
-    headers.forEach(function(h, i){ h.style.transitionDelay = (i * 40) + 'ms'; });
-    var tags = section.querySelectorAll('.tag');
-    tags.forEach(function(t, i){ t.style.transitionDelay = (i * 75) + 'ms'; });
-    var observer = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        section.classList.toggle('wave-revealed', e.isIntersecting);
-      });
-    }, { threshold: 0.2 });
-    observer.observe(section);
-  })();
-</script>
 
 
 
