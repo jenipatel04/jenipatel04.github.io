@@ -68,7 +68,7 @@
     width:360px;height:360px;border-radius:50%;
     background:radial-gradient(circle, rgba(255,255,255,0.55) 0%, transparent 70%);
   }
-  .hero-inner{position:relative;z-index:1;display:flex;align-items:center;gap:40px;flex-wrap:wrap;}
+  .hero-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;text-align:center;}
   .hero-avatar{
     width:132px;height:132px;border-radius:50%;
     background:linear-gradient(135deg, var(--accent), #e8c979);
@@ -81,9 +81,9 @@
   .hero-tag{display:inline-flex;align-items:center;gap:8px;background:#ffffff;color:#000000;padding:7px 18px;border-radius:20px;font-size:0.85rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;border:1px solid rgba(0,0,0,0.35);box-shadow:0 0 0 4px rgba(244,180,0,0.18), 0 4px 14px rgba(244,180,0,0.35);}.hero-tag .dot{width:8px;height:8px;border-radius:50%;background:#1c9a4b;box-shadow:0 0 0 0 rgba(28,154,75,0.7);animation:pulse-dot 1.8s infinite;}@keyframes pulse-dot{0%{box-shadow:0 0 0 0 rgba(28,154,75,0.6);}70%{box-shadow:0 0 0 8px rgba(28,154,75,0);}100%{box-shadow:0 0 0 0 rgba(28,154,75,0);}}
   .hero-text h1{font-size:2.5rem;font-weight:800;margin-bottom:8px;}
   .hero-role{font-size:1.05rem;color:#000000;font-weight:400;margin-bottom:16px;max-width:600px;}
-  .hero-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:0.9rem;color:#000000;margin-bottom:22px;}
+  .hero-meta{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;font-size:0.9rem;color:#000000;margin-bottom:22px;}
   .hero-meta span{display:flex;align-items:center;gap:6px;}
-  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
   .btn{
     padding:11px 24px;border-radius:6px;font-weight:700;font-size:0.9rem;
     transition:transform .15s, box-shadow .15s;display:inline-block;
@@ -97,47 +97,27 @@
   section{padding:64px 0;}
   .section-label{
     font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;
-    color:var(--blue);font-weight:700;margin-bottom:8px;
+    color:var(--blue);font-weight:700;margin-bottom:8px;text-align:center;
   }
-  .section-title{font-size:1.9rem;font-weight:800;color:var(--navy-deep);margin-bottom:32px;}
+  .section-title{font-size:1.9rem;font-weight:800;color:var(--navy-deep);margin-bottom:32px;text-align:center;}
   .alt-bg{background:#fffbe6;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 
   /* SUMMARY */
-  .summary-text{font-size:1.05rem;color:var(--text);max-width:820px;margin-bottom:28px;}
+  .summary-text{font-size:1.05rem;color:var(--text);max-width:820px;margin:0 auto 28px;text-align:center;}
   .summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;margin-top:8px;}
   .stat-card{
     background:var(--card);border:1px solid var(--border);border-radius:10px;
-    padding:20px;text-align:left;border-left:4px solid var(--blue);
+    padding:20px;text-align:center;border-top:4px solid var(--blue);
   }
   .stat-num{font-size:1.7rem;font-weight:800;color:var(--navy-deep);}
   .stat-label{font-size:0.85rem;color:var(--muted);margin-top:4px;}
 
-  /* PHILOSOPHY / VENN */
-  .philosophy{
-    background:var(--accent);color:#000000;border-radius:16px;padding:44px 32px;
-    text-align:center;
-  }
-  .philosophy .section-label{color:#000000;}
-  .philosophy h2{font-size:1.5rem;margin-bottom:6px;}
-  .philosophy p.sub{color:#000000;max-width:600px;margin:0 auto 32px;font-size:0.95rem;}
-  .formula-row{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;font-size:1.1rem;font-weight:700;}
-  .formula-box{
-    background:#ffffff;border:1px solid rgba(0,0,0,0.20);
-    border-radius:12px;padding:20px 22px;min-width:150px;
-  }
-  .formula-box .big{font-size:1.4rem;color:#000000;margin-bottom:6px;}
-  .formula-box .small{font-size:0.78rem;color:#333333;font-weight:400;}
-  .formula-op{color:#000000;font-size:1.6rem;}
-  .formula-result{
-    background:#ffffff;color:#000000;border:1px solid #000000;border-radius:12px;padding:20px 26px;
-    min-width:170px;
-  }
-  .formula-result .small{color:rgba(11,11,11,0.7);}
 
    /* SKILLS */
   .skills-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+  .skill-cat{text-align:center;}
   .skill-cat h4{color:var(--navy-deep);font-size:0.95rem;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--accent);display:inline-block;}
-  .skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+  .skill-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:8px;}
   .tag{
     background:#fdf2d0;color:var(--blue);font-size:0.8rem;font-weight:700;
     padding:6px 12px;border-radius:16px;
@@ -172,7 +152,7 @@
   @media(max-width:760px){.grid-2{grid-template-columns:1fr;}}
   .card{
     background:var(--card);border:1px solid var(--border);border-radius:10px;
-    padding:22px 24px;margin-bottom:16px;
+    padding:22px 24px;margin-bottom:16px;text-align:center;
   }
   .card h3{font-size:1.05rem;color:var(--navy-deep);margin-bottom:3px;}
   .card .org{font-size:0.9rem;color:var(--blue);font-weight:700;margin-bottom:4px;}
@@ -191,7 +171,7 @@
 
   /* VOLUNTEERING */
   .vol-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
-  .vol-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px;border-top:3px solid var(--accent);}
+  .vol-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px;border-top:3px solid var(--accent);text-align:center;}
   .vol-card h3{font-size:1.02rem;color:var(--navy-deep);margin-bottom:3px;}
   .vol-card .org{color:var(--blue);font-size:0.88rem;font-weight:700;margin-bottom:2px;}
   .vol-card .meta{font-size:0.78rem;color:var(--muted);margin-bottom:10px;}
@@ -199,12 +179,12 @@
 
   /* RECOMMENDATIONS */
   .rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
-  .rec-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:24px;position:relative;}
+  .rec-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:24px;position:relative;text-align:center;}
   .rec-quote{font-size:0.92rem;color:var(--text);font-style:italic;margin-bottom:14px;}
   .rec-name{font-size:0.9rem;font-weight:800;color:var(--navy-deep);}
   .rec-title{font-size:0.78rem;color:var(--muted);}
 
-  .insights-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}.insight-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px;display:flex;flex-direction:column;border-top:3px solid var(--blue);}.insight-card h3{font-size:1.02rem;color:var(--navy-deep);margin-bottom:10px;line-height:1.35;}.insight-card p{font-size:0.88rem;color:var(--muted);margin-bottom:16px;flex:1;}.insight-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}.insight-tags span{background:#fdf2d0;color:var(--blue);font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:12px;}.insight-link{font-size:0.85rem;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:6px;}.insight-link:hover{color:var(--accent);text-decoration:underline;}/* BOOKING FORM */
+  .insights-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}.insight-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px;display:flex;flex-direction:column;align-items:center;text-align:center;border-top:3px solid var(--blue);}.insight-card h3{font-size:1.02rem;color:var(--navy-deep);margin-bottom:10px;line-height:1.35;}.insight-card p{font-size:0.88rem;color:var(--muted);margin-bottom:16px;flex:1;}.insight-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:16px;}.insight-tags span{background:#fdf2d0;color:var(--blue);font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:12px;}.insight-link{font-size:0.85rem;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:6px;}.insight-link:hover{color:var(--accent);text-decoration:underline;}/* BOOKING FORM */
   .book-form{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:28px;max-width:600px;}
   .book-form label{display:block;font-size:0.85rem;font-weight:700;color:var(--navy-deep);margin-bottom:6px;}
   .book-form input, .book-form textarea{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:6px;font-size:0.95rem;font-family:inherit;margin-bottom:16px;background:#fff;color:var(--text);}
@@ -353,7 +333,7 @@
 
     </div>
   </div>
-</section><section id="insights" class="alt-bg"><div class="container"><div class="section-label">From LinkedIn</div><h2 class="section-title">HR Insights &amp; Field Notes</h2><p class="summary-text">Selected posts from my LinkedIn, sharing real-world HR strategies, event takeaways, and lessons from the field.</p><div class="insights-grid"><div class="insight-card"><h3>My Approach to Recruiting</h3><p>Great hires aren't found on paper alone. I evaluate every candidate through three lenses: IQ — intelligence and capability; EQ — empathy, teamwork, and communication; and a Real-Life Test — how they show up under real conditions. Balanced, people-first evaluation, and I hold myself to the same standard.</p><div class="insight-tags"><span>#Recruitment</span><span>#TalentAcquisition</span><span>#CandidateExperience</span></div><a href="#philosophy-section" class="insight-link">See my Recruitment Formula ↗</a></div><div class="insight-card"><h3>Why Letting AI Write Your Job Application Might Backfire</h3><p>Recruiters can tell when an application has no fingerprints on it — perfect grammar, every box checked, and somehow it says nothing at all. My rule: use AI to research a company and tighten your structure, but don't let it write your story or script your interview answers. Companies hire people, not prompts.</p><div class="insight-tags"><span>#JobSearchTips</span><span>#CareerAdvice</span><span>#AIatWork</span></div><a href="https://www.linkedin.com/feed/update/urn:li:activity:7495457032045592576/" target="_blank" rel="noopener" class="insight-link">Read on LinkedIn ↗</a></div><div class="insight-card"><h3>A Small Fix for Candidate Ghosting in Interview Scheduling</h3><p>A recruiter told me candidate ghosting during scheduling is a real, recurring headache — endless back-and-forth emails, then silence. So I added a live calendar link to my own portfolio, letting recruiters pick a time and note what the call's about. Small process changes like this can save real time and reduce no-shows.</p><div class="insight-tags"><span>#CandidateExperience</span><span>#Recruitment</span><span>#TalentAcquisition</span></div><a href="https://www.linkedin.com/feed/update/urn:li:activity:7485672511381118976/" target="_blank" rel="noopener" class="insight-link">Read on LinkedIn ↗</a></div><div class="insight-card"><h3>What 9 Months of Job Hunting Taught Me About HR</h3><p>Reading people through real conversations. Practical employee engagement insights. The basics of people analytics. Precise resume tailoring and ATS navigation. Nine months on the other side of the hiring table taught me more about HR fundamentals — and resilience — than any course could.</p><div class="insight-tags"><span>#HRSkills</span><span>#EmployeeEngagement</span><span>#PeopleAnalytics</span></div><a href="https://www.linkedin.com/feed/update/urn:li:activity:7477768006136143874/" target="_blank" rel="noopener" class="insight-link">Read on LinkedIn ↗</a></div><div class="insight-card"><h3>Networking Isn't a Transaction</h3><p>Asked about my biggest networking challenge, my answer was simple: it's mutual — you give, they give. My approach: message only active users on LinkedIn and follow up at most twice; in person, show up and ask real questions. One wellness event gave me more insight than months of cold messaging.</p><div class="insight-tags"><span>#Networking</span><span>#CareerGrowth</span><span>#EarlyCareer</span></div><a href="https://www.linkedin.com/feed/update/urn:li:activity:7473717481451282433/" target="_blank" rel="noopener" class="insight-link">Read on LinkedIn ↗</a></div><div class="insight-card"><h3>The Hidden Cost of Fear-Driven Applications and AI Rejections</h3><p>A friend applied to a backup role out of fear of layoffs, passed every round, then rejected the offer over pay. Weeks of recruiter effort, gone — and other candidates got only an AI-generated "no." Fear is driving applications, AI is driving rejections, and real human potential is getting lost in between.</p><div class="insight-tags"><span>#Recruitment</span><span>#CandidateExperience</span><span>#FutureOfWork</span></div><a href="https://www.linkedin.com/feed/update/urn:li:activity:7472626593455259648/" target="_blank" rel="noopener" class="insight-link">Read on LinkedIn ↗</a></div><div class="insight-card"><h3>Workforce Planning in Real Time (Not on a Spreadsheet)</h3><p>This weekend the restaurant was busier than we expected — not enough hands, too many tables, pressure building fast. So I did what HR professionals do: I put everyone where they shine. Result: tables served in 26 minutes, rating climbed from 4.5 to 4.6, and 50+ new reviews in 3 days.</p><div class="insight-tags"><span>#WorkforcePlanning</span><span>#HospitalityHR</span><span>#PeopleAndCulture</span></div><a href="https://www.linkedin.com/feed/update/urn:li:activity:7462842098900320256/" target="_blank" rel="noopener" class="insight-link">Read on LinkedIn ↗</a></div><div class="insight-card"><h3>Hospitality HR: It's All About the People Behind the Service</h3><p>Takeaways from an HRPA Student Coffee Chat with a hospitality VP of HR: balancing high turnover and seasonal staffing while maintaining service quality, finding the sweet spot between customer service and employee well-being, and how AI and a multi-generational workforce are reshaping the industry's future.</p><div class="insight-tags"><span>#HospitalityHR</span><span>#FutureofHR</span><span>#PeopleAndCulture</span></div><a href="https://www.linkedin.com/feed/update/urn:li:activity:7429977251292614657/" target="_blank" rel="noopener" class="insight-link">Read on LinkedIn ↗</a></div><div class="insight-card"><h3>What an HRPA Event Taught Me About Authenticity in HR</h3><p>The keynote on the SHIFT Model (Self-awareness, Holistic Leadership, Innovation, Flourishing, Transformation) was a powerhouse session. My biggest takeaway: show up as you are and truly understand others to build belonging and trust — genuine human connection can start with a simple "hello."</p><div class="insight-tags"><span>#HRPA</span><span>#Leadership</span><span>#FutureofHR</span></div><a href="https://www.linkedin.com/feed/update/urn:li:activity:7382384431573008386/" target="_blank" rel="noopener" class="insight-link">Read on LinkedIn ↗</a></div></div></div></section><section id="volunteering" class="alt-bg">
+</section><section id="insights" class="alt-bg"><div class="container"><div class="section-label">From LinkedIn</div><h2 class="section-title">HR Insights &amp; Field Notes</h2><p class="summary-text">Selected posts from my LinkedIn, sharing real-world HR strategies, event takeaways, and lessons from the field.</p><div class="insights-grid"><div class="insight-card"><h3>My Approach to Recruiting</h3><p>Great hires aren't found on paper alone. I evaluate every candidate through three lenses: IQ — intelligence and capability; EQ — empathy, teamwork, and communication; and a Real-Life Test — how they show up under real conditions. Balanced, people-first evaluation, and I hold myself to the same standard.</p><div class="insight-tags"><span>#Recruitment</span><span>#TalentAcquisition</span><span>#CandidateExperience</span></div></div><div class="insight-card"><h3>Why Letting AI Write Your Job Application Might Backfire</h3><p>Recruiters can tell when an application has no fingerprints on it — perfect grammar, every box checked, and somehow it says nothing at all. My rule: use AI to research a company and tighten your structure, but don't let it write your story or script your interview answers. Companies hire people, not prompts.</p><div class="insight-tags"><span>#JobSearchTips</span><span>#CareerAdvice</span><span>#AIatWork</span></div><a href="https://www.linkedin.com/feed/update/urn:li:activity:7495457032045592576/" target="_blank" rel="noopener" class="insight-link">Read on LinkedIn ↗</a></div><div class="insight-card"><h3>A Small Fix for Candidate Ghosting in Interview Scheduling</h3><p>A recruiter told me candidate ghosting during scheduling is a real, recurring headache — endless back-and-forth emails, then silence. So I added a live calendar link to my own portfolio, letting recruiters pick a time and note what the call's about. Small process changes like this can save real time and reduce no-shows.</p><div class="insight-tags"><span>#CandidateExperience</span><span>#Recruitment</span><span>#TalentAcquisition</span></div><a href="https://www.linkedin.com/feed/update/urn:li:activity:7485672511381118976/" target="_blank" rel="noopener" class="insight-link">Read on LinkedIn ↗</a></div><div class="insight-card"><h3>What 9 Months of Job Hunting Taught Me About HR</h3><p>Reading people through real conversations. Practical employee engagement insights. The basics of people analytics. Precise resume tailoring and ATS navigation. Nine months on the other side of the hiring table taught me more about HR fundamentals — and resilience — than any course could.</p><div class="insight-tags"><span>#HRSkills</span><span>#EmployeeEngagement</span><span>#PeopleAnalytics</span></div><a href="https://www.linkedin.com/feed/update/urn:li:activity:7477768006136143874/" target="_blank" rel="noopener" class="insight-link">Read on LinkedIn ↗</a></div><div class="insight-card"><h3>Networking Isn't a Transaction</h3><p>Asked about my biggest networking challenge, my answer was simple: it's mutual — you give, they give. My approach: message only active users on LinkedIn and follow up at most twice; in person, show up and ask real questions. One wellness event gave me more insight than months of cold messaging.</p><div class="insight-tags"><span>#Networking</span><span>#CareerGrowth</span><span>#EarlyCareer</span></div><a href="https://www.linkedin.com/feed/update/urn:li:activity:7473717481451282433/" target="_blank" rel="noopener" class="insight-link">Read on LinkedIn ↗</a></div><div class="insight-card"><h3>The Hidden Cost of Fear-Driven Applications and AI Rejections</h3><p>A friend applied to a backup role out of fear of layoffs, passed every round, then rejected the offer over pay. Weeks of recruiter effort, gone — and other candidates got only an AI-generated "no." Fear is driving applications, AI is driving rejections, and real human potential is getting lost in between.</p><div class="insight-tags"><span>#Recruitment</span><span>#CandidateExperience</span><span>#FutureOfWork</span></div><a href="https://www.linkedin.com/feed/update/urn:li:activity:7472626593455259648/" target="_blank" rel="noopener" class="insight-link">Read on LinkedIn ↗</a></div><div class="insight-card"><h3>Workforce Planning in Real Time (Not on a Spreadsheet)</h3><p>This weekend the restaurant was busier than we expected — not enough hands, too many tables, pressure building fast. So I did what HR professionals do: I put everyone where they shine. Result: tables served in 26 minutes, rating climbed from 4.5 to 4.6, and 50+ new reviews in 3 days.</p><div class="insight-tags"><span>#WorkforcePlanning</span><span>#HospitalityHR</span><span>#PeopleAndCulture</span></div><a href="https://www.linkedin.com/feed/update/urn:li:activity:7462842098900320256/" target="_blank" rel="noopener" class="insight-link">Read on LinkedIn ↗</a></div><div class="insight-card"><h3>Hospitality HR: It's All About the People Behind the Service</h3><p>Takeaways from an HRPA Student Coffee Chat with a hospitality VP of HR: balancing high turnover and seasonal staffing while maintaining service quality, finding the sweet spot between customer service and employee well-being, and how AI and a multi-generational workforce are reshaping the industry's future.</p><div class="insight-tags"><span>#HospitalityHR</span><span>#FutureofHR</span><span>#PeopleAndCulture</span></div><a href="https://www.linkedin.com/feed/update/urn:li:activity:7429977251292614657/" target="_blank" rel="noopener" class="insight-link">Read on LinkedIn ↗</a></div><div class="insight-card"><h3>What an HRPA Event Taught Me About Authenticity in HR</h3><p>The keynote on the SHIFT Model (Self-awareness, Holistic Leadership, Innovation, Flourishing, Transformation) was a powerhouse session. My biggest takeaway: show up as you are and truly understand others to build belonging and trust — genuine human connection can start with a simple "hello."</p><div class="insight-tags"><span>#HRPA</span><span>#Leadership</span><span>#FutureofHR</span></div><a href="https://www.linkedin.com/feed/update/urn:li:activity:7382384431573008386/" target="_blank" rel="noopener" class="insight-link">Read on LinkedIn ↗</a></div></div></div></section><section id="volunteering" class="alt-bg">
   <div class="container">
     <div class="section-label">Giving Back</div>
     <h2 class="section-title">Volunteering Experience</h2>
@@ -494,35 +474,6 @@
         </div>
       </div>
     </div>
-</section><section id="philosophy-section">
-  <div class="container">
-    <div class="philosophy">
-      <div class="section-label">My Approach</div>
-      <h2>My Recruitment Formula</h2>
-      <p class="sub">Great hires aren't found on paper alone. I evaluate every candidate through three lenses — and I hold myself to the same standard.</p>
-      <div class="formula-row">
-        <div class="formula-box">
-          <div class="big">IQ</div>
-          <div class="small">Intelligence &amp; capability</div>
-        </div>
-        <div class="formula-op">+</div>
-        <div class="formula-box">
-          <div class="big">EQ</div>
-          <div class="small">Empathy, teamwork &amp; communication</div>
-        </div>
-        <div class="formula-op">+</div>
-        <div class="formula-box">
-          <div class="big">Real-Life Test</div>
-          <div class="small">How they show up under real conditions</div>
-        </div>
-        <div class="formula-op">=</div>
-        <div class="formula-result">
-          <div class="big">Your Next Hire</div>
-          <div class="small">Balanced, people-first evaluation</div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section><section id="schedule">
   <div class="container">
     <div class="section-label">Let's Talk</div>
